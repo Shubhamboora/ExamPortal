@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <!-- heading -->
+                    <mat-card-header>
+                        <div class="text-center">
+                            <mat-card-title class="text-center">
+                                Read These Instructions Carefully Before Starting Your Quiz. 
+                            </mat-card-title>
+                        </div>
+                    </mat-card-header>
+                    <!-- content -->
+                    <mat-card-content *ngIf="quiz">
+                        <h3>{{quiz.title}}</h3>
+                        <p>{{quiz.description}}</p>
+                        <br/>
+                        <ul>
+                            <li>This Quiz is only for practice purpose.</li>
+                            <li>Quiz duration will be <b>{{quiz.numberOfQuestions*2}} minutes.</b></li>
+                            <li>You can attempt this quiz any number of times<./li>
+                            <li>There are <b>{{quiz.numberOfQuestions}} questions.</b></li>
+                            <li>Each question contains <b>{{quiz.maxMarks/quiz.numberOfQuestions}} marks.</b></li>
+                            <li>There is no negetive marking.</li>
+                            <li>All questions are of type MCQ.</li>
+
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br/>
+                        <h2><b>Do's</b></h2>
+                        <ul>
+                            <li>Use a supported browser. Google Chrome, Safari, or Microsoft Edge on laptop or desktop computers are the ONLY supported browsers</li>
+                            <li>Close unneeded applications and processes running on your computer to reduce network interference.</li>
+                        </ul>
+                        <h2><b>Don't</b></h2>
+                        <ul>
+                            <li>Avoide use a mobile device to take an online test.</li>
+                            <li>Avoid having multiple devices connected to the internet during a test.</li>
+                        </ul>
+                    </mat-card-content>
+                    <!-- action -->
+                    <mat-card-actions class="text-center">
+                        <button (click)="startQuiz()" mat-raised-button color="primary">Start Quiz</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
